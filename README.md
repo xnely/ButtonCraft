@@ -25,4 +25,4 @@ ButtonCraft exploits the human psyche to make leveling an exceptionally frustrat
 
 ## Installation
 
-Download the <a src="https://github.com/xnely/mods/releases/download/1.0.0/fabric-example-mod-1.0.0.jar">.jar</a> and place it into the /mods folder of your Minecraft installation. Make sure to have Fabric for 1.16 installed, and that you download and place the <a src="https://www.curseforge.com/minecraft/mc-mods/fabric-api/files">Fabric API</a> in your mods folder.
+Download the [.jar](https://github.com/xnely/mods/releases/download/1.0.0/fabric-example-mod-1.0.0.jar) and place it into the /mods folder of your Minecraft installation. Make sure to have Fabric for 1.16 installed, and that you download and place the [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api/files) in your mods folder.
