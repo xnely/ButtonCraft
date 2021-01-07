@@ -2,7 +2,7 @@
 
 ## Description
 
-Do you have fun playing MineCraft? Maybe a little too much? ButtonCraft aims to fix this problem.
+Do you have fun playing Minecraft? Maybe a little too much? ButtonCraft aims to fix this problem.
 
 ButtonCraft exploits the human psyche to make leveling an exceptionally frustrating grind. Firstly, it removes XP orbs normally obtained by killing mobs, mining, smelting, etc. The only way to obtain XP in ButtonCraft is to press any physical button in the game. This includes any wood button, the stone button, and the newly added diamond and netherite buttons. In general, buttons will most often do nothing, less often give a small amount of XP, and least commonly, remove a large amount of XP (possibly going into the negative). This is done to make losing XP more frustrating. The behavior of these different buttons can be seen below.
 
