@@ -10,6 +10,10 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+/** This is called Examplemod because that's the name of the template I started with.
+ * 
+ * Don't look at the mixins too closely.
+ */
 public class ExampleMod implements ModInitializer {
 
 	public static final Block EXAMPLE_BLOCK = new ExampleButton(AbstractBlock.Settings.of(Material.SUPPORTED).noCollision().strength(0.5F));

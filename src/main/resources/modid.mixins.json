@@ -13,8 +13,6 @@
     "OverwriteTitle",
     "NegativeXPHud"
   ],
-  "server": [
-  ],
   "injectors": {
     "defaultRequire": 1
   }

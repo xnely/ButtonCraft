@@ -19,7 +19,4 @@ public class NetheriteButton extends AbstractButtonBlock{
      return 2;
      }
 
-     protected int getPressTicks() {
-      return 120;
-   }
 }

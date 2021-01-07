@@ -1,6 +1,7 @@
 package net.fabricmc.example.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 import net.minecraft.client.MinecraftClient;
@@ -12,14 +13,18 @@ import net.minecraft.client.util.math.MatrixStack;
 @Mixin(InGameHud.class)
 public abstract class NegativeXPHud extends DrawableHelper {
 
-
-    @Shadow private MinecraftClient client;
+   protected NegativeXPHud(){
+      this.client = MinecraftClient.getInstance();
+      throw new AssertionError();
+   }
+    
+    @Shadow private final MinecraftClient client;
     @Shadow private int scaledHeight;
     @Shadow private int scaledWidth;
 
-    @Shadow abstract public TextRenderer getFontRenderer();
+    @Shadow public abstract TextRenderer getFontRenderer();
 
-    public void renderExperienceBar(MatrixStack matrices, int x) {
+    @Overwrite public void renderExperienceBar(MatrixStack matrices, int x) {
         this.client.getProfiler().push("expBar");
         this.client.getTextureManager().bindTexture(DrawableHelper.GUI_ICONS_TEXTURE);
         int i = this.client.player.getNextLevelExperience();

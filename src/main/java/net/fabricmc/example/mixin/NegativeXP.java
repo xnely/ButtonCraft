@@ -1,6 +1,7 @@
 package net.fabricmc.example.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 import net.minecraft.entity.EntityType;
@@ -17,21 +18,18 @@ public abstract class NegativeXP extends LivingEntity {
         super(entityType, world);
     }
 
-    @Shadow
-    private boolean isCreative() {
-        return false;
-    }
-    @Shadow private void addScore(int experience){}
+    @Shadow public abstract boolean isCreative();
+    @Shadow public abstract void addScore(int score);
 
 
-    @Shadow private float experienceProgress;
-    @Shadow private int totalExperience;
-    @Shadow private int experienceLevel;
+    @Shadow public float experienceProgress;
+    @Shadow public int totalExperience;
+    @Shadow public int experienceLevel;
     @Shadow private int lastPlayedLevelUpSoundTime;
 
 
     //Allow negative xp
-    public void addExperience(int experience) {
+    @Overwrite public void addExperience(int experience) {
         this.addScore(experience);
         this.experienceProgress += (float)experience / (float)this.getNextLevelExperience();
         this.totalExperience = MathHelper.clamp(this.totalExperience + experience, Integer.MIN_VALUE, Integer.MAX_VALUE); //Integer.MIN_VALUE was 0
@@ -56,10 +54,10 @@ public abstract class NegativeXP extends LivingEntity {
   
      }
 
-     public void addExperienceLevels(int levels) {
+     @Overwrite public void addExperienceLevels(int levels) {
         this.experienceLevel += levels;
         
-        /*
+        /* Would reset progress to zero, preventing negative Xp
         if (this.experienceLevel < 0) {
            this.experienceLevel = 0;
            this.experienceProgress = 0.0F;
@@ -74,10 +72,10 @@ public abstract class NegativeXP extends LivingEntity {
   
      }
 
-     public int getNextLevelExperience() {
+     @Overwrite public int getNextLevelExperience() {
         if (this.experienceLevel >= 30) {
            return 112 + (this.experienceLevel - 30) * 9;
-        } else if(this.experienceLevel < 0){
+        } else if(this.experienceLevel < 0){ // Added so that negative levels don't scale like positive ones, to demoralize the player
             return 7;
         } else {
            return this.experienceLevel >= 15 ? 37 + (this.experienceLevel - 15) * 5 : 7 + this.experienceLevel * 2;

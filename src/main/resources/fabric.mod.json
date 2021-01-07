@@ -3,10 +3,10 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "ButtonCraft",
+  "description": "This mod is specifically designed NOT to be fun. It is also implemented poorly and dangerously on a code level, so I wouldn't be suprised if it has a lot of incompatabilities, however I know it works with Lithium, Phosphor, and Sodium.\n\nXP orbs are removed from the game. The only way to gain xp is to press buttons.\nWood: 20 ticks, Expected -0.3 XP\nStone: 40 ticks, Expected 0 XP\nDiamond: 80 ticks, Expected 5 XP\nNetherite: 160 ticks, expected 25 XP",
   "authors": [
-    "Me!"
+    "xNeLy"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
