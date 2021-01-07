@@ -25,4 +25,4 @@ ButtonCraft exploits the human psyche to make leveling an exceptionally frustrat
 
 ## Installation
 
-Download the [.jar](https://github.com/xnely/mods/releases/download/1.0.0/fabric-example-mod-1.0.0.jar) and place it into the /mods folder of your Fabric installation. Download and place the [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api/files) in your mods folder. There are no known incompatabilities known as of yet. ButtonCraft has been tested with Sodium, Lithium, and Phosphor.
+Download the [.jar](https://github.com/xnely/mods/releases/download/1.0.0/fabric-example-mod-1.0.0.jar) and place it into the /mods folder of your Fabric installation. Download and place the [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api/files) in your mods folder. There are no known incompatabilities as of yet. ButtonCraft has been tested with Sodium, Lithium, and Phosphor.
