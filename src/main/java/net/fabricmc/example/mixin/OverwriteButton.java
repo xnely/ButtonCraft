@@ -33,9 +33,11 @@ public class OverwriteButton {
             // ADDED
             if(!world.isClient){
                 double rand = Math.random();
+                /* //OLD way
                 if(rand <= .1)player.addExperience(-10);
-                else if(rand <= .3) player.addExperience(10);
-                System.out.println("Rand was "+rand);
+                else if(rand <= .3) player.addExperience(10);*/
+                if(rand <= 0.01) player.addExperience(-100); // 1% lose 100
+                else if(rand <= 0.11) player.addExperience(10); // 10% gain 10
             }
            // ADDED
            this.powerOn(state, world, pos);

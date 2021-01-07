@@ -4,11 +4,14 @@
   "package": "net.fabricmc.example.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "OverwriteButton"
+    "OverwriteButton",
+    "NegativeXP",
+    "RemoveXPOrb"
   ],
   "client": [
     "ExampleMixin",
-    "OverwriteTitle"
+    "OverwriteTitle",
+    "NegativeXPHud"
   ],
   "server": [
   ],
