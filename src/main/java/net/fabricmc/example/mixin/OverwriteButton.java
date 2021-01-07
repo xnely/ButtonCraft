@@ -56,8 +56,8 @@ public abstract class OverwriteButton extends WallMountedBlock {
                   if(rand <= 0.01) player.addExperience(-1000); // 1% lose 1000
                   else if(rand <= 0.16) player.addExperience(100); // 15% gain 100
                } else{ // EXPECTED +25
-                  if(rand <= 0.01) player.addExperience(-10000); // 1% lose 1000
-                  else if(rand <= 0.5) player.addExperience(250); // 15% gain 100
+                  if(rand <= 0.01) player.addExperience(-10000); // 1% lose 10000
+                  else if(rand <= 0.5) player.addExperience(250); // 15% gain 250
                }
          }
          this.powerOn(state, world, pos);
