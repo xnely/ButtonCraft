@@ -1,3 +1,4 @@
 {
-    "block.modid.example_block": "Diamond Button"
+    "block.modid.example_block": "Diamond Button",
+    "block.modid.netherite_button": "Netherite Button"
 }

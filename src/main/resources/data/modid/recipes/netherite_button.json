@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+      "item": "modid:example_block"
+    },
+    "addition": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "result": {
+      "item": "modid:netherite_button"
+    }
+  }
